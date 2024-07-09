@@ -1,6 +1,8 @@
-const MarkAllAsUnpacked = ({ onClick }) => (
+import { markAllAsUnpacked } from "../lib/reducer";
+
+const MarkAllAsUnpacked = ({ dispatch }) => (
   <div className="mb-16">
-    <button className="w-full" onClick={onClick}>
+    <button className="w-full" onClick={() => dispatch(markAllAsUnpacked())}>
       🏠 Mark All As Unpacked
     </button>
   </div>
